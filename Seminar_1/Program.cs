@@ -18,15 +18,33 @@
 // a = -3 b = 9 -> нет
 // camelCase
 // "=" - присваивание "==" - проверка на равенство
-Console.Write("Введите первое число: ");
-int firstDigit = Convert.ToInt32(Console.ReadLine()); 
-Console.Write("Введите второе число: ");
-int secondDigit = Convert.ToInt32(Console.ReadLine()); 
-if (firstDigit == secondDigit*secondDigit)
+// Console.Write("Введите первое число: ");
+// int firstDigit = Convert.ToInt32(Console.ReadLine()); 
+// Console.Write("Введите второе число: ");
+// int secondDigit = Convert.ToInt32(Console.ReadLine()); 
+// if (firstDigit == secondDigit*secondDigit)
+// {
+//     Console.WriteLine("Число " + firstDigit + " является квадратом от числа " + secondDigit);
+// }
+// else // все остальные случаи
+// {
+//     Console.WriteLine("Число " + firstDigit + " НЕ является квадратом от числа " + secondDigit);
+// }
+// Напишите программу, которая на вход принимает одно число (N), 
+// а на выходе показывает все целые числа в промежутке от -N до N.
+// 4 -> "-4, -3, -2, -1, 0, 1, 2, 3, 4" 
+// 2 -> " -2, -1, 0, 1, 2"
+
+Console.Write("Введите число: ");
+
+int N = Convert.ToInt32(Console.ReadLine());
+
+int negativeN = N * -1;
+
+while (negativeN <=N)
 {
-    Console.WriteLine("Число " + firstDigit + " является квадратом от числа " + secondDigit);
-}
-else // все остальные случаи
-{
-    Console.WriteLine("Число " + firstDigit + " НЕ является квадратом от числа " + secondDigit);
+    Console.WriteLine(negativeN); // -n = -2, то печатаю -2
+    negativeN++; // Инкремент negativeN = negativeN + 1
+    // Декремент negativeN-- уменьшает на 1
+
 }

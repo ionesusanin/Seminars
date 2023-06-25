@@ -37,13 +37,18 @@
 
 Console.Write("Введите число: ");
 
+
 int N = Convert.ToInt32(Console.ReadLine());
+if(N < 0)
+{
+    N = N * -1;
+}
 
 int negativeN = N * -1;
 
 while (negativeN <=N)
 {
-    Console.WriteLine(negativeN); // -n = -2, то печатаю -2
+    Console.Write(negativeN + " "); // -n = -2, то печатаю -2
     negativeN++; // Инкремент negativeN = negativeN + 1
     // Декремент negativeN-- уменьшает на 1
 

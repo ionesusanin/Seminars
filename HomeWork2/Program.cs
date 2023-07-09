@@ -19,19 +19,41 @@
 // 78 -> третьей цифры нет
 // 32679 -> 6
 
+// Console.WriteLine("Введите число: ");
+// int number = Convert.ToInt32(Console.ReadLine());
+// int Length = number.ToString().Length;
+// if (Length >= 3)
+// {
+//     while (number > 999)
+//     {
+//         number = number / 10;
+//     }
+//     int result = number % 10;
+//     Console.WriteLine($"Третья цифра это {result}");
+// }
+// else
+// {
+//     Console.WriteLine($"Третьей цифры нет");
+// }
+
+
+//  Напишите программу, которая принимает на вход цифру, 
+// обозначающую день недели, и проверяет, является ли этот день выходным.
+// 6 -> да
+// 7 -> да
+// 1 -> нет
+
 Console.WriteLine("Введите число: ");
 int number = Convert.ToInt32(Console.ReadLine());
-int Length = number.ToString().Length;
-if (Length >= 3)
+if (number <= 5)
 {
-    while (number > 999)
-    {
-        number = number / 10;
-    }
-    int result = number % 10;
-    Console.WriteLine($"Третья цифра это {result}");
+    Console.WriteLine($"Это будний день");
+}
+if (number >= 6 && number < 8)
+{
+Console.WriteLine($"Это выходной день");
 }
 else
 {
-    Console.WriteLine($"Третьей цифры нет");
+    Console.WriteLine($"неверный параметр");
 }

@@ -59,3 +59,20 @@
 
 // Double d = Math.Round(Math.Sqrt( Math.Pow(x1 - x2, 2) + Math.Pow(y1 - y2, 2)), 2);
 // Console.WriteLine($"Расстояние: {d}");
+
+// Напишите программу, которая
+// принимает на вход число (N) и выдаёт таблицу
+// квадратов чисел от 1 до N.
+// 5 -> 1, 4, 9, 16, 25.
+// 2 -> 1,4
+
+int start = 1;
+Console.WriteLine("Введите число: ");
+
+int end = Convert.ToInt32(Console.ReadLine());
+
+while (start <= end)
+{
+    Console.Write(Math.Pow(start, 2) + " ");
+    start++; // start = start + 1 - инкремент
+}

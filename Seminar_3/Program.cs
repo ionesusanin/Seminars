@@ -66,13 +66,22 @@
 // 5 -> 1, 4, 9, 16, 25.
 // 2 -> 1,4
 
-int start = 1;
+// int start = 1;
+// Console.WriteLine("Введите число: ");
+
+// int end = Convert.ToInt32(Console.ReadLine());
+
+// while (start <= end)
+// {
+//     Console.Write(Math.Pow(start, 2) + " ");
+//     start++; // start = start + 1 - инкремент
+// }
+
 Console.WriteLine("Введите число: ");
 
 int end = Convert.ToInt32(Console.ReadLine());
-
-while (start <= end)
+// for - точка старта(1); Условие цикла (start <= end); Увеличение счетчика start++
+for (int i = 1; i <= end; i++)
 {
-    Console.Write(Math.Pow(start, 2) + " ");
-    start++; // start = start + 1 - инкремент
+     Console.Write(Math.Pow(i, 2) + " ");
 }

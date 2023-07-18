@@ -21,22 +21,38 @@
 // 78 -> 2
 // 89126 -> 5
 
-Console.WriteLine("Введите число: ");
-int number = Convert.ToInt32(Console.ReadLine());
-int copyNumber = number;
-int count = 0; // Количество чисел
-if (number != 0)
-{
-    while (number > 0)
-    {
-         count++; // Обнаружена 1 цифра, count = count + 1
-         number /= 10; // number = number / 10
+// Console.WriteLine("Введите число: ");
+// int number = Convert.ToInt32(Console.ReadLine());
+// int copyNumber = number;
+// int count = 0; // Количество чисел
+// if (number != 0)
+// {
+//     while (number > 0)
+//     {
+//          count++; // Обнаружена 1 цифра, count = count + 1
+//          number /= 10; // number = number / 10
 
-    }
-}
+//     }
+// }
 
-else
-{
-    count++;
-}
-Console.WriteLine($"В числе {copyNumber} {count} цифр");
+// else
+// {
+//     count++;
+// }
+// Console.WriteLine($"В числе {copyNumber} {count} цифр");
+
+// Напишите программу, которая
+// принимает на вход число N и выдаёт
+// произведение чисел от 1 до N.
+// 4 -> 24
+// 5 -> 120
+
+//  Console.WriteLine("Введите число: ");
+// int N = Convert.ToInt32(Console.ReadLine()); // Получили число N
+// int result = 1; // Умножив на 0 Старания пропадут
+// for (int i = 1; i <= N; i++)
+// {
+//      result *= i; // result = result * i
+    
+// }
+// Console.WriteLine($"Факториал числа {N} = {result }");

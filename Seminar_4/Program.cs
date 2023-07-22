@@ -63,8 +63,8 @@
 // [1,0,1,1,0,1,0,0]
 
 
-int size = 8;
-int[] array = new int[size]; // массив на size элементов, на 8 элементов
+
+int[] randomArray = new int[8]; 
 //Изначально массив заполнен нулями
 // array.Length = size - Длина массива array = size
 for (int i = 1; i < array.Length; i++)
@@ -72,7 +72,7 @@ for (int i = 1; i < array.Length; i++)
     // array[i] = new Random().Next(0,2)
     //  Next(2) - НАчинаем с 0 и идем до 2: 0,1 ; тк по 
     // условию массив состоит из 0 и 1
-    array[i] = new Random().Next(3);
+    array[i] = new Random().Next(1000);
     // Console.Write(array[i] + " ");
 
 }

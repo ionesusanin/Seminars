@@ -46,7 +46,7 @@ if(N < 0)
 
 int negativeN = N * -1;
 
-while (negativeN <=N)
+while(negativeN <=N)
 {
     Console.Write(negativeN + " "); // -n = -2, то печатаю -2
     negativeN++; // Инкремент negativeN = negativeN + 1

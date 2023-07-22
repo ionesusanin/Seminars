@@ -73,7 +73,49 @@
 // -3; массив [6, 7, 19, 345, 3] -> да
 
 
-int[] getArray(int size, int min, int max)
+// int[] getArray(int size, int min, int max)
+// {
+//     int[] result = new int[size]; 
+//     for (int i = 0; i < size; i++)
+//     {
+//         result[i] = new Random().Next(min, max +1);
+//     }
+//     return result; 
+// }
+// int[] array = getArray(7, 0 ,10); 
+// Console.WriteLine($"Массив: [ {string.Join("; ", array)}] ");
+
+// // True - число есть, false - числа нет
+// bool findElement(int[] arr, int element)
+// {
+//     for (int i = 0; i < arr.Length; i++)
+//     {
+//         if (arr[i] == element);
+//         {
+//             return true; // элеменд найден
+//         }        
+//     }
+//     return false; // элемент не найден
+// }
+// int numberForSearch = 10;
+// if (findElement(array, numberForSearch))
+// {
+//     Console.WriteLine($"Элемент {numberForSearch} присутствует в массиве");
+// }
+// else
+// {
+//     Console.WriteLine($"Элемент {numberForSearch} отсутствует в массиве");
+// }
+
+
+// Найдите произведение пар чисел в одномерном массиве.
+// Парой считаем первый и последний элемент, второй и предпоследний
+// и т.д. Результат запишите в новом массиве.
+// [1 2 3 4 5] -> 5 8 3
+// [6 7 3 6] -> 36 21
+
+
+int[] GetArray(int size, int min, int max)
 {
     int[] result = new int[size]; 
     for (int i = 0; i < size; i++)
@@ -82,27 +124,28 @@ int[] getArray(int size, int min, int max)
     }
     return result; 
 }
-int[] array = getArray(7, 0 ,10); 
+int[] array = GetArray(7, 0 ,10); 
 Console.WriteLine($"Массив: [ {string.Join("; ", array)}] ");
 
-// True - число есть, false - числа нет
-bool findElement(int[] arr, int element)
+// PascalCase - для методов, каждое слово с большой буквы
+// camelCase - первая буква маленькая, остальные заглавные
+
+int[] MultiplyingArray(int[] array)
 {
-    for (int i = 0; i < arr.Length; i++)
+    int sizeNewArray = array.Length / 2 + array.Length % 2;
+    int[] newArray = new int[sizeNewArray];
+    for (int i = 0, j = array.Length - 1; i < array.Length / 2; i++, j--)
+    // i - номер элемента с левого края (первый элемент)
+    // j - номер элемента с правого края (последний элемент)
     {
-        if (arr[i] == element);
-        {
-            return true; // элеменд найден
-        }        
+        newArray[i] = array[i] * array[j];
+
     }
-    return false; // элемент не найден
+    if(array.Length % 2 ==1)
+    {
+        newArray[sizeNewArray - 1] = array[array.Length / 2];
+
+    }
+    return newArray;
 }
-int numberForSearch = 10;
-if (findElement(array, numberForSearch))
-{
-    Console.WriteLine($"Элемент {numberForSearch} присутствует в массиве");
-}
-else
-{
-    Console.WriteLine($"Элемент {numberForSearch} отсутствует в массиве");
-}
+Console.WriteLine($"Результат: [ {string.Join("; ", MultiplyingArray(array))}] ");

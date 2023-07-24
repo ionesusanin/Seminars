@@ -10,51 +10,65 @@
 // min = array[i]
 
 
-int[] GetArray(int size, int min, int max)
-{
-    int[] array = new int[size]; //только нули
-    for (int i = 0; i < size; i++)
-    {
-        array[i] = new Random().Next(min, max + 1);
-         
-    }
-    return array;
-
-}
-
-void PrintArray (int[] arr)
-{
-    Console.Write("[");
-//foreach(int item in arr)
+// int[] GetArray(int size, int min, int max)
 // {
-//     Console.Write(InvalidTimeZoneException + " ");
-// }
-// Цикл для перебора элементов массива
-// arr[i] = item
-// item = arr[0], arr[1], .......
-    
-    for (int i = 0; i < arr.Length; i++)
-    {
-        Console.Write(arr[i] + "  "); // Расстояние между элементами массива в 1 Tab
-    }
-    
-        Console.Write("]");
-}
-int[] result = GetArray(9, 0, 15);
-PrintArray(result);
-Console.WriteLine();
-PrintArray(CopyArray(result));
-// № 1 запись в новый массив
- int[] CopyArray(int[] array)
- {
-    int[] copyArray = new int[array.Length];
-    int size = array.Length;
-    //Start - 0 элемент, end -  конец исходного массива array
-    for (int start = 0, end = size - 1; start < size; start++, end--)
-    {
-        copyArray[start] = array[end];
+//     int[] array = new int[size]; //только нули
+//     for (int i = 0; i < size; i++)
+//     {
+//         array[i] = new Random().Next(min, max + 1);
+         
+//     }
+//     return array;
 
-    }
-    return copyArray;
- }
- //№2
+// }
+
+// void PrintArray (int[] arr)
+// {
+//     Console.Write("[");
+// //foreach(int item in arr)
+// // {
+// //     Console.Write(InvalidTimeZoneException + " ");
+// // }
+// // Цикл для перебора элементов массива
+// // arr[i] = item
+// // item = arr[0], arr[1], .......
+    
+//     for (int i = 0; i < arr.Length; i++)
+//     {
+//         Console.Write(arr[i] + "  "); // Расстояние между элементами массива в 1 Tab
+//     }
+    
+//         Console.Write("]");
+// }
+// int[] result = GetArray(9, 0, 15);
+// PrintArray(result);
+// Console.WriteLine();
+// PrintArray(CopyArray(result));
+// // № 1 запись в новый массив
+//  int[] CopyArray(int[] array)
+//  {
+//     int[] copyArray = new int[array.Length];
+//     int size = array.Length;
+//     //Start - 0 элемент, end -  конец исходного массива array
+//     for (int start = 0, end = size - 1; start < size; start++, end--)
+//     {
+//         copyArray[start] = array[end];
+
+//     }
+//     return copyArray;
+//  }
+//  //№2 меняем элементы в текущем массиве
+//   void ReverseArray(int[] array)
+//   {
+//     int size = array.Length;
+//     for (int i = 0, j = size - 1; i < size / 2; i++, j--)
+//         {
+//             int temp = array[i];
+//             array[i] = array[j];
+//             array[j] = temp;
+//         }
+//   }
+//   Console.WriteLine();
+//   ReverseArray(result);
+//   PrintArray(result);
+   

@@ -72,3 +72,29 @@
 //   ReverseArray(result);
 //   PrintArray(result);
    
+
+
+// Напишите программу, которая принимает на вход три
+// числа и проверяет, может ли существовать треугольник с сторонами
+// такой длины.
+
+
+
+int a = 10;
+int b = 4;
+int c = 5;
+
+bool IsTriangle(int a, int b, int c)
+{
+   return ( ((a + b) > c) && ((b + c) > a) && ((a + c) > b));
+}
+Console.WriteLine(IsTriangle(a,b,c));
+
+// if (IsTriangle(a ,b ,c))
+// {
+//     Console.WriteLine($"Треугольник существует");
+// }
+// else
+// {
+//     Console.WriteLine($"Треугольник Не существует");
+// }

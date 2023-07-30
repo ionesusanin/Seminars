@@ -68,3 +68,48 @@
 // if (row2 <= row+1 && col2 <= col+1)
 // Console.Write($"Значение элемента равно {randomArray[row2-1,col2-1]:F2} ");
 // else Console.Write("Такого элемента нет в массиве");
+
+
+// Задайте двумерный массив из целых чисел.
+//  Найдите среднее арифметическое элементов в каждом столбце.
+
+// Например, задан массив:
+// 1 4 7 2
+// 5 9 2 3
+// 8 4 2 4
+// Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3.
+
+// ср арифм 0 столбца: (1+5+8)/3=4,6
+int row = 3;
+int col = 3;
+int[,] matrix = new int[row, col];
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+            matrix[i, j] = new Random().Next(11);
+            Console.Write(matrix[i, j] + "\t");
+    }
+    Console.WriteLine();
+    }
+
+// for (int i = 0; i < matrix.GetLength(0); i++)
+//     {
+//          double rowSum = 0;
+//         for (int j = 0; j < matrix.GetLength(1); j++)
+//         {
+//             rowSum += matrix[i, j];
+            
+//     }
+//     Console.WriteLine($"Сумма элементов строчки {i} = {Math.Round(rowSum / matrix.GetLength(1),2)}");
+//     }
+for (int i = 0; i < matrix.GetLength(1); i++)
+    {
+         double colSum = 0;
+        for (int j = 0; j < matrix.GetLength(0); j++)
+        {
+            colSum += matrix[j, i];
+            
+    }
+    Console.WriteLine($"Сумма элементов столбце {i} = {Math.Round(colSum / matrix.GetLength(0),2)}");
+    }

@@ -24,13 +24,29 @@
 // N = 6 -> "1, 2, 3, 4, 5, 6"
 // Факториал - N
 
-Console.WriteLine("Введите число N: ");
-int n = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите число N: ");
+// int n = Convert.ToInt32(Console.ReadLine());
 
-string PrintNumbers(int start, int end)
-{
-    if (start == end) return start.ToString();
-    return start + "," + PrintNumbers(start + 1, end);
+// string PrintNumbers(int start, int end)
+// {
+//     if (start == end) return start.ToString();
+//     return start + "," + PrintNumbers(start + 1, end);
     
+// }
+// Console.WriteLine($"Числа от 1 до {n}: {PrintNumbers(1, n)}");
+
+
+// Задача 67: Напишите программу, которая будет принимать на вход число и
+// возвращать сумму его цифр.
+// 453 -> 12
+// 45 -> 9
+
+Console.Write("Введите число : ");
+int number = Convert.ToInt32(Console.ReadLine());
+int SumNumbers(int num)
+{
+    if (num == 0) return 0;
+    return num % 10 + SumNumbers(num / 10);
+
 }
-Console.WriteLine($"Числа от 1 до {n}: {PrintNumbers(1, n)}");
+Console.WriteLine($"Сумма цифр числа {number}: {SumNumbers(number)}");

@@ -41,12 +41,40 @@
 // 453 -> 12
 // 45 -> 9
 
-Console.Write("Введите число : ");
-int number = Convert.ToInt32(Console.ReadLine());
-int SumNumbers(int num)
+// Console.Write("Введите число : ");
+// int number = Convert.ToInt32(Console.ReadLine());
+// int SumNumbers(int num)
+// {
+//     if (num == 0) return 0;
+//     return num % 10 + SumNumbers(num / 10);
+
+// }
+// Console.WriteLine($"Сумма цифр числа {number}: {SumNumbers(number)}");
+
+
+// Задача 69: Напишите программу, которая на вход принимает два числа A и B, и
+// возводит число А в целую степень B с помощью рекурсии.
+// A = 3; B = 5 -> 243 (3⁵)
+// A = 2; B = 3 -> 8
+
+
+Console.Write("Введите число A: ");
+int A = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите число B: ");
+int B = Convert.ToInt32(Console.ReadLine()); 
+
+int Pow (int num, int rank)
 {
-    if (num == 0) return 0;
-    return num % 10 + SumNumbers(num / 10);
+    if (rank == 0) return 1;
+    if (rank == 1) return num;
+    return num * Pow(num, rank -1);
 
 }
-Console.WriteLine($"Сумма цифр числа {number}: {SumNumbers(number)}");
+if (B < 0)
+{
+    Console.WriteLine( "Степень меньше 0 не обрабатываем");
+    return;
+
+}
+Console.WriteLine($"Число {A} в степени {B}: {Pow(A, B)}");
+

@@ -25,15 +25,37 @@
 
 
 
+// Console.Write("Введите число M: ");
+// int M = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите число N: ");
+// int N = Convert.ToInt32(Console.ReadLine()); 
+
+// int SumNumbers(int M, int n)
+// {
+//     if (M == N) return N;
+//     return M + SumNumbers(M + 1, N);
+
+// }
+// Console.WriteLine($"Сумма элементов от {M} до {N} равно {SumNumbers(M, N)}");
+
+
+
+// Задача 68: Напишите программу вычисления функции Аккермана с помощью рекурсии.
+//  Даны два неотрицательных числа m и n.
+// m = 2, n = 3 -> A(m,n) = 9
+// m = 3, n = 2 -> A(m,n) = 29
+
+
 Console.Write("Введите число M: ");
 int M = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите число N: ");
 int N = Convert.ToInt32(Console.ReadLine()); 
 
-int SumNumbers(int M, int n)
+int Akkerman(int M, int N)
 {
-    if (M == N) return N;
-    return M + SumNumbers(M + 1, N);
+    if (M == 0) return N + 1;
+    else if (N == 0) return Akkerman(M -1, 1);
+    else  return Akkerman(M - 1, Akkerman(M, N - 1));
 
 }
-Console.WriteLine($"Сумма элементов от {M} до {N} равно {SumNumbers(M, N)}");
+Console.WriteLine($"Функция Аккермана равна {Akkerman(M, N)}");
